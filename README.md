@@ -13,7 +13,7 @@
 ## Interaction with the Service
 
 
-**Endpoint for Image Resizing:** **GET** `/image/:name`
+### **Endpoint for Image Resizing:** **GET** `/image/:name`
 
 The image resizing endpoint accepts an image name and, optionally, a resolution specified by the query resolution parameter. E.g:
 
@@ -23,7 +23,7 @@ Display resized image with specified resolution:
 
 ______
 
-**Endpoint for Image Resizing:** **GET** `/statistics`
+### **Endpoint for Image Resizing:** **GET** `/statistics`
 
 - totalOriginalImages (integer): Total number of original images existing in the specified directory.
 
@@ -36,7 +36,7 @@ ______
 **Example:** `http://localhost:4123/upload-image`
 _____________
 
-**(Extra bonus - not required) Image Upload Endpoint:** **POST** `/upload-image`
+### **(Extra bonus - not required) Image Upload Endpoint:** **POST** `/upload-image`
 
 The image upload endpoint accepts a single image file named image. You can use curl or any other tool to make a POST request:
 
@@ -45,6 +45,28 @@ The image upload endpoint accepts a single image file named image. You can use c
 Be sure to replace `path_to_image/image.jpg` with the path to the image you want to upload.
 
 
+
 ## Testing:
 
 Go inside the `tests` directory and use command: `npm test`
+
+
+# Docker Configs
+
+## 1. Building the Docker Image
+Open the terminal in the project directory and run the command to build the Docker image using the Dockerfile:
+
+`docker-compose build`
+Wait until the build is complete.
+
+## 2. Starting the Services
+Run the command to start the containers:
+
+`docker-compose up`
+Your application will now be accessible at `http://localhost:4123`.
+
+## 3. Shutdown and Cleanup
+To stop the services, use the Ctrl + C key combination in the terminal. To clean up junk containers and images, run:
+
+`docker-compose down`
+
