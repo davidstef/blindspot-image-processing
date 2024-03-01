@@ -10,10 +10,10 @@
 
 
 
-## Interaction with the Service
+## Interaction with the Service:
 
 
-### **Endpoint for Image Resizing:** **GET** `/image/:name`
+### Endpoint for Image Resizing: GET `/image/:name`
 
 The image resizing endpoint accepts an image name and, optionally, a resolution specified by the query resolution parameter. E.g:
 
@@ -23,20 +23,20 @@ Display resized image with specified resolution:
 
 ______
 
-### **Endpoint for Image Resizing:** **GET** `/statistics`
+### Endpoint for Image Resizing: GET `/statistics`
 
-- totalOriginalImages (integer): Total number of original images existing in the specified directory.
+- `totalOriginalImages` (integer): Total number of original images existing in the specified directory.
 
-- resizedImagesCount (integer): Total number of successfully resized images.
+- `resizedImagesCount` (integer): Total number of successfully resized images.
 
-- cacheHits (integer): Number of successful cache hits.
+- `cacheHits` (integer): Number of successful cache hits.
 
-- cacheMisses (integer): Number of cache misses.
+- `cacheMisses` (integer): Number of cache misses.
 
 **Example:** `http://localhost:4123/upload-image`
 _____________
 
-### **(Extra bonus - not required) Image Upload Endpoint:** **POST** `/upload-image`
+### (Extra bonus - not required) Image Upload Endpoint: POST `/upload-image`
 
 The image upload endpoint accepts a single image file named image. You can use curl or any other tool to make a POST request:
 
