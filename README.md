@@ -47,7 +47,7 @@ Go inside the `tests` directory and use command: `npm test`
 
 # Docker Configs
 
-- **! Before Running** `docker-compose up` you should stop redis container service in docker (it's integrated in app docker container with the same port)
+- **! Before Running** `docker-compose up` you should stop redis container service in docker (it's already integrated in the docker container application, being set to the same port)
 
 - In `.env` file, set `REDIS_HOST` to `redis-1` instead of `localhost`
 
