@@ -47,6 +47,10 @@ Go inside the `tests` directory and use command: `npm test`
 
 # Docker Configs
 
+- **! Before Running** `docker-compose up` you should stop redis container service in docker (it's integrated in app docker container with the same port)
+
+- In `.env` file, set `REDIS_HOST` to `redis-1` instead of `localhost`
+
 ## 1. Building the Docker Image
 Open the terminal in the project directory and run the command to build the Docker image using the Dockerfile:
 
@@ -63,4 +67,6 @@ Your application will now be accessible at `http://localhost:4123`.
 To stop the services, use the Ctrl + C key combination in the terminal. To clean up junk containers and images, run:
 
 `docker-compose down`
+
+
 
