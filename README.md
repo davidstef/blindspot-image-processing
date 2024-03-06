@@ -6,7 +6,11 @@
 
 2). Use npm to install all project dependencies: `npm install`
 
-3). Start the server: `npm start`
+3). Config Redis Container:
+ a). Run: `docker pull redis`;
+ b). Run: `docker run --name redis-2 -p 6380:6379 -d redis`;
+
+4). Start the server: `npm start`
 
 
 
@@ -34,17 +38,6 @@ ______
 - `cacheMisses` (integer): Number of cache misses.
 
 **Example:** `http://localhost:4123/upload-image`
-_____________
-
-### (Extra bonus - not required) Image Upload Endpoint: POST `/upload-image`
-
-The image upload endpoint accepts a single image file named image. You can use curl or any other tool to make a POST request:
-
-
-**Example:**  _image=@path_to_image/image.jpg_ `http://localhost:4123/upload-image`
-Be sure to replace `path_to_image/image.jpg` with the path to the image you want to upload.
-
-
 
 ## Testing:
 
