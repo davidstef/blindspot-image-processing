@@ -7,8 +7,9 @@
 2). Use npm to install all project dependencies: `npm install`
 
 3). Config Redis Container:
- a). Run: `docker pull redis`;
- b). Run: `docker run --name redis-2 -p 6380:6379 -d redis`;
+
+ - Run: `docker pull redis`;
+ - Run: `docker run --name redis-1 -p 6379:6379 -d redis`;
 
 4). Start the server: `npm start`
 
